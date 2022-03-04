@@ -4,5 +4,5 @@
 - Melissa Ho
 - Ze Lei
 - Samantha Saxton-Getty
-
+- Jimmy Nguyen
 
