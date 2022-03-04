@@ -2,3 +2,6 @@
 
 Team Members:
 Ze Lei
+Melissa Ho
+Jimmy Nguyen
+Samantha Saxton-Getty
