@@ -1,6 +1,8 @@
 # CSC680_SP22_Final_Project
 
  Team Members:
-- Ze Lei
 - Melissa Ho
+- Ze Lei
+- Samantha Saxton-Getty
+
 
