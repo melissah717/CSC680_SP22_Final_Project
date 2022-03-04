@@ -3,6 +3,7 @@
  Team Members:
 - Melissa Ho
 - Ze Lei
-- Samantha Saxton-Getty
 - Jimmy Nguyen
+- Samantha Saxton-Getty
+
 
