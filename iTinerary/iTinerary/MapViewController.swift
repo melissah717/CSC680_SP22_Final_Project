@@ -17,13 +17,12 @@ class MapViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-//        mapView.dataSource = self
-        // Set initial location in Honolulu
-        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
-
+        let initialLocation = CLLocationCoordinate2D(latitude: 37.77986, longitude: -122.42905)
+//        mapView.setCenter(initialLocation, animated: true)
+        mapView.setRegion(MKCoordinateRegion(center: initialLocation, latitudinalMeters: 20000, longitudinalMeters: 20000), animated: true)
     }
     
-
+    
 }
 
 private extension MKMapView {
