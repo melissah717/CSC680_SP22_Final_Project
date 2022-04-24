@@ -42,7 +42,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ToMapSegue", sender: indexPath)
+        if(indexPath.row == 0){
+            performSegue(withIdentifier: "ToMapSegue", sender: indexPath)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
