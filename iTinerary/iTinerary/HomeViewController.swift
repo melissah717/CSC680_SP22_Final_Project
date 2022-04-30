@@ -54,8 +54,5 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         guard let indexPath = sender as? IndexPath else {
             return
         }
-        
     }
-
 }
-

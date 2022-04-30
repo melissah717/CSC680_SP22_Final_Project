@@ -1,0 +1,6 @@
+framework module Pods_iTinerary {
+  umbrella header "Pods-iTinerary-umbrella.h"
+
+  export *
+  module * { export * }
+}
