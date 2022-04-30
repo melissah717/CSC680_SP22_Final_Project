@@ -22,11 +22,12 @@ class MapViewController: UIViewController, UISearchResultsUpdating {
         navigationItem.searchController = searchVC
         
         let initialLocation = CLLocationCoordinate2D(latitude: 37.77986, longitude: -122.42905)
+        title = "Map"
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        mapView.frame = view.bounds
+        mapView.frame = CGRect(x: 0, y: view.safeAreaInsets.top, width: view.frame.width, height: view.frame.height - view.safeAreaInsets.top)
     }
     
     func updateSearchResults(for searchController: UISearchController) {
