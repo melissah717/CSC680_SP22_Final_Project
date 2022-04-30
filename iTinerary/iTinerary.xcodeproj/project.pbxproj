@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2888A8EB281CC15E00463253 /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888A8EA281CC15E00463253 /* PinViewController.swift */; };
 		F48B732027DD2A7800DDFA20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48B731F27DD2A7800DDFA20 /* AppDelegate.swift */; };
 		F48B732227DD2A7800DDFA20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48B732127DD2A7800DDFA20 /* SceneDelegate.swift */; };
 		F48B732427DD2A7800DDFA20 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48B732327DD2A7800DDFA20 /* HomeViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2888A8EA281CC15E00463253 /* PinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinViewController.swift; sourceTree = "<group>"; };
 		F48B731C27DD2A7800DDFA20 /* iTinerary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTinerary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48B731F27DD2A7800DDFA20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F48B732127DD2A7800DDFA20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				F48B731F27DD2A7800DDFA20 /* AppDelegate.swift */,
 				F48B732127DD2A7800DDFA20 /* SceneDelegate.swift */,
 				F48B732327DD2A7800DDFA20 /* HomeViewController.swift */,
+				2888A8EA281CC15E00463253 /* PinViewController.swift */,
 				F4D6DDAF27DD6FEF00D5739E /* MapViewController.swift */,
 				F48B732527DD2A7800DDFA20 /* Main.storyboard */,
 				F48B732827DD2A7900DDFA20 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 				F48B732427DD2A7800DDFA20 /* HomeViewController.swift in Sources */,
 				F48B732027DD2A7800DDFA20 /* AppDelegate.swift in Sources */,
 				F48B732227DD2A7800DDFA20 /* SceneDelegate.swift in Sources */,
+				2888A8EB281CC15E00463253 /* PinViewController.swift in Sources */,
 				F4D6DDB027DD6FEF00D5739E /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
