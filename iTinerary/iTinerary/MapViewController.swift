@@ -60,9 +60,8 @@ extension MapViewController: ResultsViewControllerDelegate {
         searchVC.dismiss(animated: true, completion: nil)
         
         // Removing all map pins - NOT WORKING PROPERLY ATM
-//        let leftOverPins = mapView.annotations
-//        print(leftOverPins)
-//        mapView.removeAnnotation(leftOverPins)
+        let leftOverPins = mapView.annotations
+        mapView.removeAnnotations(leftOverPins)
         
         // Adding a map pin
         let pin = MKPointAnnotation()
