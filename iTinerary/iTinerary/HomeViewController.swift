@@ -16,8 +16,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var options: [Option] = [
     Option(title: "Maps"),
+    Option(title: "Tasks"),
     Option(title: "Schedules"),
-    Option(title: "Notes"),
     Option(title: "Reviews"),
     Option(title: "Awards")
     ]
@@ -45,6 +45,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(indexPath.row == 0){
             performSegue(withIdentifier: "ToMapSegue", sender: indexPath)
+        }
+        else if (indexPath.row == 1){
+            performSegue(withIdentifier: "ToToDoSegue", sender: indexPath)
         }
     }
     

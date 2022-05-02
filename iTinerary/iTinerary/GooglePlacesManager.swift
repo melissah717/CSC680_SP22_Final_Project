@@ -4,6 +4,7 @@
 //
 //  Created by Samantha Saxton-Getty on 4/29/22.
 //
+//  Reference: https://www.youtube.com/watch?v=Cd-B5_vkOFs&t=286s&ab_channel=iOSAcademy
 
 import Foundation
 import GooglePlaces

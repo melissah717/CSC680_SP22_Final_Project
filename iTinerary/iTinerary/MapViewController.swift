@@ -4,6 +4,7 @@
 //
 //  Created by Melissa Ho on 3/12/22.
 //
+//  Reference: https://www.youtube.com/watch?v=Cd-B5_vkOFs&t=286s&ab_channel=iOSAcademy
 
 import UIKit
 import MapKit
@@ -60,7 +61,7 @@ extension MapViewController: ResultsViewControllerDelegate {
         // Hides the keyboard after selecting a search result
         searchVC.dismiss(animated: true, completion: nil)
         
-        // Removing all map pins - NOT WORKING PROPERLY ATM
+        // Removing all map pins
         let leftOverPins = mapView.annotations
         mapView.removeAnnotations(leftOverPins)
         
