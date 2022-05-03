@@ -31,7 +31,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let image = UIImage(named: "iTineraryLogo.png")
         let imageView = UIImageView(image: image)
-        imageView.contentMode = .scaleAspectFill
+//        imageView.contentMode = .scaleAspectFill
         navigationItem.titleView = imageView
     }
     
@@ -55,14 +55,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         else if (indexPath.row == 1){
             performSegue(withIdentifier: "ToTaskSegue", sender: indexPath)
         }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let MapViewController = segue.destination as? MapViewController else {
-            return
-        }
-        guard let indexPath = sender as? IndexPath else {
-            return
+        else if (indexPath.row == 2){
+            performSegue(withIdentifier: "ToScheduleSegue", sender: indexPath)
         }
     }
 }
