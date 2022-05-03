@@ -3,6 +3,8 @@
 //  iTinerary
 //
 //  Created by Ze Lei on 3/12/22.
+//
+// Resource:
 
 import UIKit
 
@@ -15,18 +17,22 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     var options: [Option] = [
-    Option(title: "Maps"),
-    Option(title: "Tasks"),
-    Option(title: "Schedules"),
-    Option(title: "Reviews"),
-    Option(title: "Awards")
+        Option(title: "Maps"),
+        Option(title: "Tasks"),
+        Option(title: "Schedules"),
+        Option(title: "Reviews"),
+        Option(title: "Awards")
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        title = "iTinerary"
+        
+        let image = UIImage(named: "iTineraryLogo.png")
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFill
+        navigationItem.titleView = imageView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,7 +53,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             performSegue(withIdentifier: "ToMapSegue", sender: indexPath)
         }
         else if (indexPath.row == 1){
-            performSegue(withIdentifier: "ToToDoSegue", sender: indexPath)
+            performSegue(withIdentifier: "ToTaskSegue", sender: indexPath)
         }
     }
     
