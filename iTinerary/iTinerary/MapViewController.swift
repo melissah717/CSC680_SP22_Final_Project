@@ -25,7 +25,7 @@ class MapViewController: UIViewController, UISearchResultsUpdating {
         navigationItem.searchController = searchVC
         
 //        let initialLocation = CLLocationCoordinate2D(latitude: 37.77986, longitude: -122.42905)
-        title = "Map"
+        title = "Maps"
         
         if(address != nil){
             searchVC.searchBar.text = address

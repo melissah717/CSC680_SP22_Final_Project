@@ -28,11 +28,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
-        let image = UIImage(named: "iTineraryLogo.png")
-        let imageView = UIImageView(image: image)
-//        imageView.contentMode = .scaleAspectFill
-        navigationItem.titleView = imageView
+        title = "iTinerary"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
