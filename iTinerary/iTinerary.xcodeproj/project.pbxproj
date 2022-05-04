@@ -11,9 +11,9 @@
 		28BCA2DF2820A4C000321165 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28BCA2DD2820A4C000321165 /* CoreDataModel.xcdatamodeld */; };
 		28BCA2E22820A56E00321165 /* ToDoListItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BCA2E02820A56E00321165 /* ToDoListItem+CoreDataClass.swift */; };
 		28BCA2E32820A56E00321165 /* ToDoListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BCA2E12820A56E00321165 /* ToDoListItem+CoreDataProperties.swift */; };
+		2F46A037282237FD00D43730 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F46A036282237FD00D43730 /* LaunchScreen.storyboard */; };
 		2F8BCE02281D0DFF0003C2B1 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8BCE01281D0DFF0003C2B1 /* ResultsViewController.swift */; };
 		2F8BCE04281D0E820003C2B1 /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8BCE03281D0E820003C2B1 /* GooglePlacesManager.swift */; };
-		2FFE3D712822275C0094FC78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FFE3D702822275C0094FC78 /* LaunchScreen.storyboard */; };
 		F43144E72821D80400D33C95 /* MapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43144E62821D80400D33C95 /* MapListViewController.swift */; };
 		F48B732027DD2A7800DDFA20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48B731F27DD2A7800DDFA20 /* AppDelegate.swift */; };
 		F48B732227DD2A7800DDFA20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48B732127DD2A7800DDFA20 /* SceneDelegate.swift */; };
@@ -28,9 +28,9 @@
 		28BCA2DE2820A4C000321165 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		28BCA2E02820A56E00321165 /* ToDoListItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		28BCA2E12820A56E00321165 /* ToDoListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2F46A036282237FD00D43730 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F8BCE01281D0DFF0003C2B1 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		2F8BCE03281D0E820003C2B1 /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
-		2FFE3D702822275C0094FC78 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		52FB6A2ED0272265BF75D383 /* Pods-iTinerary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTinerary.debug.xcconfig"; path = "Target Support Files/Pods-iTinerary/Pods-iTinerary.debug.xcconfig"; sourceTree = "<group>"; };
 		BEA8D858C82256FE9ADC539C /* Pods-iTinerary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTinerary.release.xcconfig"; path = "Target Support Files/Pods-iTinerary/Pods-iTinerary.release.xcconfig"; sourceTree = "<group>"; };
 		F43144E62821D80400D33C95 /* MapListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 				F48B732327DD2A7800DDFA20 /* HomeViewController.swift */,
 				F4D6DDAF27DD6FEF00D5739E /* MapViewController.swift */,
 				F48B732527DD2A7800DDFA20 /* Main.storyboard */,
-				2FFE3D702822275C0094FC78 /* LaunchScreen.storyboard */,
+				2F46A036282237FD00D43730 /* LaunchScreen.storyboard */,
 				F48B732827DD2A7900DDFA20 /* Assets.xcassets */,
 				F48B732D27DD2A7900DDFA20 /* Info.plist */,
 				2F8BCE01281D0DFF0003C2B1 /* ResultsViewController.swift */,
@@ -179,7 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FFE3D712822275C0094FC78 /* LaunchScreen.storyboard in Resources */,
+				2F46A037282237FD00D43730 /* LaunchScreen.storyboard in Resources */,
 				F48B732927DD2A7900DDFA20 /* Assets.xcassets in Resources */,
 				F48B732727DD2A7800DDFA20 /* Main.storyboard in Resources */,
 			);
