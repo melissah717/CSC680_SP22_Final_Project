@@ -142,7 +142,7 @@
                                                                 <constraint firstAttribute="height" constant="60" id="ti5-Cx-TaE"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtN-mT-YbX">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Journal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtN-mT-YbX">
                                                             <rect key="frame" x="76" y="22" width="320" height="60"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
@@ -176,8 +176,9 @@
                     <connections>
                         <outlet property="tableView" destination="f3c-eu-a8H" id="kFp-JM-Cms"/>
                         <segue destination="r2Q-1F-Zuw" kind="show" identifier="ToMapSegue" id="m7a-aL-Ptb"/>
-                        <segue destination="6gp-E2-boT" kind="show" identifier="ToTaskSegue" id="j4z-6S-TpN"/>
+                        <segue destination="6gp-E2-boT" kind="show" identifier="ToChecklistSegue" id="j4z-6S-TpN"/>
                         <segue destination="t8g-uJ-kBO" kind="show" identifier="ToScheduleSegue" id="gIJ-1C-qyJ"/>
+                        <segue destination="9xe-aq-f3g" kind="show" identifier="ToJournalSegue" id="ERd-Ic-6VI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -186,7 +187,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </mapView>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="65.625"/>
+            <point key="canvasLocation" x="846" y="44"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="3iz-tL-ZvS">
@@ -256,6 +257,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZD-1E-cfx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3135" y="-173"/>
+        </scene>
+        <!--Journal View Controller-->
+        <scene sceneID="inP-vh-Fnq">
+            <objects>
+                <viewController id="9xe-aq-f3g" customClass="JournalViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u0Y-9k-DIB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kRx-sl-2en"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aMc-uh-Pho"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yfa-qX-Iv0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1699" y="-877"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="pta-Jt-h5U">

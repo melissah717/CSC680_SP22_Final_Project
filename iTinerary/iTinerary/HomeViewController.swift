@@ -17,11 +17,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     var options: [Option] = [
-        Option(title: "Maps"),
-        Option(title: "Tasks"),
-        Option(title: "Schedules"),
-        Option(title: "Reviews"),
-        Option(title: "Awards")
+        Option(title: "Map"),
+        Option(title: "Checklist"),
+        Option(title: "Schedule"),
+        Option(title: "Journal"),
     ]
 
     override func viewDidLoad() {
@@ -49,10 +48,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             performSegue(withIdentifier: "ToMapSegue", sender: indexPath)
         }
         else if (indexPath.row == 1){
-            performSegue(withIdentifier: "ToTaskSegue", sender: indexPath)
+            performSegue(withIdentifier: "ToChecklistSegue", sender: indexPath)
         }
         else if (indexPath.row == 2){
             performSegue(withIdentifier: "ToScheduleSegue", sender: indexPath)
+        }
+        else if (indexPath.row == 3) {
+            performSegue(withIdentifier: "ToJournalSegue", sender: indexPath)
         }
     }
 }
