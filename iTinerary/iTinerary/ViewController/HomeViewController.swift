@@ -14,31 +14,42 @@ struct Option {
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var tableView: UITableView!
     
-    var options: [Option] = [
-        Option(title: "Map"),
-        Option(title: "Checklist"),
-        Option(title: "Schedule"),
-        Option(title: "Journal"),
+    @IBOutlet weak var table: UITableView!
+    
+    struct ListOptions {
+        
+        let title: String
+        let imageName: String
+    }
+    
+    let data: [ListOptions] = [
+        ListOptions(title: "Map", imageName: "Map"),
+        ListOptions(title: "Checklist", imageName: "Checklist"),
+        ListOptions(title: "Schedule", imageName: "Schedule"),
+        ListOptions(title: "Journal", imageName: "Journal"),
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        table.delegate = self
+        table.dataSource = self
         title = "iTinerary"
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 190
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return options.count
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        let row = indexPath.row
-        let optionItem = options[row]
-        cell.textLabel?.text = optionItem.title
+        let listOptions = data [indexPath.row]
+        let cell = table.dequeueReusableCell(withIdentifier: "cell") as! CustomTableViewCell
+        cell.label.text = listOptions.title
+        cell.iconImageView.image = UIImage(named: listOptions.imageName)
         
         return cell
     }

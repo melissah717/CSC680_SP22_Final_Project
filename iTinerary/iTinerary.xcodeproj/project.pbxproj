@@ -13,9 +13,10 @@
 		28BCA2E32820A56E00321165 /* ToDoListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BCA2E12820A56E00321165 /* ToDoListItem+CoreDataProperties.swift */; };
 		28BCA2E6282378F600321165 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BCA2E5282378F600321165 /* JournalViewController.swift */; };
 		2F46A037282237FD00D43730 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F46A036282237FD00D43730 /* LaunchScreen.storyboard */; };
+		2F46A03B2823B37A00D43730 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F46A03A2823B37A00D43730 /* CustomTableViewCell.swift */; };
 		2F8BCE02281D0DFF0003C2B1 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8BCE01281D0DFF0003C2B1 /* ResultsViewController.swift */; };
 		2F8BCE04281D0E820003C2B1 /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8BCE03281D0E820003C2B1 /* GooglePlacesManager.swift */; };
-		F43144E72821D80400D33C95 /* MapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43144E62821D80400D33C95 /* MapListViewController.swift */; };
+		F43144E72821D80400D33C95 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43144E62821D80400D33C95 /* ScheduleViewController.swift */; };
 		F48B732027DD2A7800DDFA20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48B731F27DD2A7800DDFA20 /* AppDelegate.swift */; };
 		F48B732227DD2A7800DDFA20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48B732127DD2A7800DDFA20 /* SceneDelegate.swift */; };
 		F48B732427DD2A7800DDFA20 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48B732327DD2A7800DDFA20 /* HomeViewController.swift */; };
@@ -31,11 +32,12 @@
 		28BCA2E12820A56E00321165 /* ToDoListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		28BCA2E5282378F600321165 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		2F46A036282237FD00D43730 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2F46A03A2823B37A00D43730 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		2F8BCE01281D0DFF0003C2B1 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		2F8BCE03281D0E820003C2B1 /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
 		52FB6A2ED0272265BF75D383 /* Pods-iTinerary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTinerary.debug.xcconfig"; path = "Target Support Files/Pods-iTinerary/Pods-iTinerary.debug.xcconfig"; sourceTree = "<group>"; };
 		BEA8D858C82256FE9ADC539C /* Pods-iTinerary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTinerary.release.xcconfig"; path = "Target Support Files/Pods-iTinerary/Pods-iTinerary.release.xcconfig"; sourceTree = "<group>"; };
-		F43144E62821D80400D33C95 /* MapListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListViewController.swift; sourceTree = "<group>"; };
+		F43144E62821D80400D33C95 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		F48B731C27DD2A7800DDFA20 /* iTinerary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTinerary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48B731F27DD2A7800DDFA20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F48B732127DD2A7800DDFA20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,46 @@
 				28BCA2E02820A56E00321165 /* ToDoListItem+CoreDataClass.swift */,
 			);
 			path = ToDoListItem;
+			sourceTree = "<group>";
+		};
+		2F46A03E2823BD2D00D43730 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2F46A036282237FD00D43730 /* LaunchScreen.storyboard */,
+				F48B732527DD2A7800DDFA20 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		2F46A03F2823BD4700D43730 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				F48B731F27DD2A7800DDFA20 /* AppDelegate.swift */,
+				F48B732127DD2A7800DDFA20 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		2F46A0402823BE3200D43730 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28BCA2DB2820A48200321165 /* CoreListViewController.swift */,
+				F48B732327DD2A7800DDFA20 /* HomeViewController.swift */,
+				28BCA2E5282378F600321165 /* JournalViewController.swift */,
+				F4D6DDAF27DD6FEF00D5739E /* MapViewController.swift */,
+				2F8BCE01281D0DFF0003C2B1 /* ResultsViewController.swift */,
+				F43144E62821D80400D33C95 /* ScheduleViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2F46A0412823BE7300D43730 /* HelperFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2F46A03A2823B37A00D43730 /* CustomTableViewCell.swift */,
+				2F8BCE03281D0E820003C2B1 /* GooglePlacesManager.swift */,
+			);
+			path = HelperFiles;
 			sourceTree = "<group>";
 		};
 		8EFE9939F011406F2CF8A2B6 /* Pods */ = {
@@ -103,21 +145,14 @@
 		F48B731E27DD2A7800DDFA20 /* iTinerary */ = {
 			isa = PBXGroup;
 			children = (
+				2F46A03F2823BD4700D43730 /* Delegate */,
+				2F46A0412823BE7300D43730 /* HelperFiles */,
+				2F46A03E2823BD2D00D43730 /* Storyboard */,
 				28BCA2E42820A58100321165 /* ToDoListItem */,
-				F48B731F27DD2A7800DDFA20 /* AppDelegate.swift */,
-				F48B732127DD2A7800DDFA20 /* SceneDelegate.swift */,
-				F48B732327DD2A7800DDFA20 /* HomeViewController.swift */,
-				F4D6DDAF27DD6FEF00D5739E /* MapViewController.swift */,
-				28BCA2E5282378F600321165 /* JournalViewController.swift */,
-				F48B732527DD2A7800DDFA20 /* Main.storyboard */,
-				2F46A036282237FD00D43730 /* LaunchScreen.storyboard */,
+				2F46A0402823BE3200D43730 /* ViewController */,
 				F48B732827DD2A7900DDFA20 /* Assets.xcassets */,
-				F48B732D27DD2A7900DDFA20 /* Info.plist */,
-				2F8BCE01281D0DFF0003C2B1 /* ResultsViewController.swift */,
-				2F8BCE03281D0E820003C2B1 /* GooglePlacesManager.swift */,
-				28BCA2DB2820A48200321165 /* CoreListViewController.swift */,
-				F43144E62821D80400D33C95 /* MapListViewController.swift */,
 				28BCA2DD2820A4C000321165 /* CoreDataModel.xcdatamodeld */,
+				F48B732D27DD2A7900DDFA20 /* Info.plist */,
 			);
 			path = iTinerary;
 			sourceTree = "<group>";
@@ -248,7 +283,8 @@
 				F4D6DDB027DD6FEF00D5739E /* MapViewController.swift in Sources */,
 				28BCA2E22820A56E00321165 /* ToDoListItem+CoreDataClass.swift in Sources */,
 				2F8BCE02281D0DFF0003C2B1 /* ResultsViewController.swift in Sources */,
-				F43144E72821D80400D33C95 /* MapListViewController.swift in Sources */,
+				F43144E72821D80400D33C95 /* ScheduleViewController.swift in Sources */,
+				2F46A03B2823B37A00D43730 /* CustomTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

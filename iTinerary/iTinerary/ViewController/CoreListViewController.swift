@@ -25,7 +25,7 @@ class CoreListViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Tasks"
+        title = "Checklist"
         view.addSubview(tableView)
         getAllItems()
         tableView.delegate = self

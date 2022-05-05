@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MapListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
     
