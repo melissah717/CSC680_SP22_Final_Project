@@ -2,7 +2,69 @@
 //  JournalViewController.swift
 //  iTinerary
 //
-//  Created by Jimmy Nguyen on 5/4/22.
+//  Created by Melissa Ho on 5/4/22.
 //
+// Resource: https://www.youtube.com/watch?v=pZVXENscpTM
 
 import Foundation
+import UIKit
+
+class JournalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
+    var models: [(title: String, note: String)] = []
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var label: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        title = "Journal"
+    }
+    
+    @IBAction func didTapNewNote(){
+        guard let EntryViewController = storyboard?.instantiateViewController(withIdentifier: "new") as? EntryViewController else {
+            return
+        }
+        EntryViewController.title = "New Note"
+        EntryViewController.navigationItem.largeTitleDisplayMode = .never
+        EntryViewController.completion = {
+            noteTitle, note in
+            self.navigationController?.popViewController(animated: true)
+            self.models.append((title: noteTitle, note: note))
+            self.label.isHidden = true
+            self.tableView.isHidden = false
+            
+            self.tableView.reloadData()
+        }
+        navigationController?.pushViewController(EntryViewController, animated: true)
+        
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        models.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = models[indexPath.row].title
+        cell.detailTextLabel?.text = models[indexPath.row].note
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let NoteViewController = storyboard?.instantiateViewController(withIdentifier: "note") as? NoteViewController else {
+            return
+        }
+        let model = models[indexPath.row]
+        NoteViewController.navigationItem.largeTitleDisplayMode = .never
+        NoteViewController.title = "Note"
+        NoteViewController.noteTitle = model.title
+        NoteViewController.note = model.note
+        navigationController?.pushViewController(NoteViewController, animated: true)
+    }
+}
