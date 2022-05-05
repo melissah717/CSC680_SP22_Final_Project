@@ -30,27 +30,21 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7c-n7-d7s">
                                                     <rect key="frame" x="5" y="5" width="404" height="110"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vSX-Yp-1KT">
-                                                            <rect key="frame" x="8" y="25" width="60" height="60"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="map_logo_light_mode" translatesAutoresizingMaskIntoConstraints="NO" id="vSX-Yp-1KT">
+                                                            <rect key="frame" x="103" y="2" width="100" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="IJP-ng-6Yw"/>
                                                                 <constraint firstAttribute="height" constant="60" id="SQK-Tw-TT2"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Maps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1t-rS-QJF">
-                                                            <rect key="frame" x="76" y="25" width="320" height="60"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ft8-Q2-D60">
+                                                            <rect key="frame" x="76" y="22" width="320" height="60"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="linkColor"/>
-                                                    <constraints>
-                                                        <constraint firstItem="e1t-rS-QJF" firstAttribute="leading" secondItem="vSX-Yp-1KT" secondAttribute="trailing" constant="86" id="0a6-z9-rEc"/>
-                                                        <constraint firstItem="e1t-rS-QJF" firstAttribute="top" secondItem="vSX-Yp-1KT" secondAttribute="top" id="MTc-zP-3BM"/>
-                                                        <constraint firstAttribute="trailing" secondItem="e1t-rS-QJF" secondAttribute="trailing" constant="8" id="Xnp-mc-Lvc"/>
-                                                        <constraint firstItem="e1t-rS-QJF" firstAttribute="bottom" secondItem="vSX-Yp-1KT" secondAttribute="bottom" id="vvD-fV-3Vo"/>
-                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -176,9 +170,7 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="map_logo_light_mode" width="500" height="500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
