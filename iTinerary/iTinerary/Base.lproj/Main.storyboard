@@ -37,7 +37,7 @@
                                                                 <constraint firstAttribute="height" constant="60" id="SQK-Tw-TT2"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ft8-Q2-D60">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ft8-Q2-D60">
                                                             <rect key="frame" x="76" y="22" width="320" height="60"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
@@ -52,6 +52,111 @@
                                                 <constraint firstItem="s7c-n7-d7s" firstAttribute="top" secondItem="fFp-Q7-LOv" secondAttribute="top" constant="5" id="3q8-mG-ggI"/>
                                                 <constraint firstAttribute="trailing" secondItem="s7c-n7-d7s" secondAttribute="trailing" constant="5" id="Jyj-Sd-OT7"/>
                                                 <constraint firstItem="s7c-n7-d7s" firstAttribute="leading" secondItem="fFp-Q7-LOv" secondAttribute="leading" constant="5" id="e1l-HK-Qjo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="120" id="d57-pE-C04">
+                                        <rect key="frame" x="0.0" y="164.5" width="414" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d57-pE-C04" id="InQ-nO-zGb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2H5-ID-q4t">
+                                                    <rect key="frame" x="5" y="5" width="404" height="110"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Checklist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pi3-OW-B4H">
+                                                            <rect key="frame" x="76" y="22" width="320" height="60"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="checklist_logo_light_mode" translatesAutoresizingMaskIntoConstraints="NO" id="9OJ-rO-lOi">
+                                                            <rect key="frame" x="89" y="12" width="78" height="80"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="60" id="XCJ-cr-HtK"/>
+                                                                <constraint firstAttribute="height" constant="60" id="tWc-ue-ivb"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2H5-ID-q4t" firstAttribute="leading" secondItem="InQ-nO-zGb" secondAttribute="leading" constant="5" id="7aJ-R8-8Sk"/>
+                                                <constraint firstItem="2H5-ID-q4t" firstAttribute="top" secondItem="InQ-nO-zGb" secondAttribute="top" constant="5" id="EGw-C0-AkN"/>
+                                                <constraint firstAttribute="bottom" secondItem="2H5-ID-q4t" secondAttribute="bottom" constant="5" id="Ide-zK-tLs"/>
+                                                <constraint firstAttribute="trailing" secondItem="2H5-ID-q4t" secondAttribute="trailing" constant="5" id="Yob-AM-2W8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="120" id="HQI-ks-7fD">
+                                        <rect key="frame" x="0.0" y="284.5" width="414" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HQI-ks-7fD" id="sta-uK-zbW">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIm-qc-zWf">
+                                                    <rect key="frame" x="5" y="5" width="404" height="110"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Schedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXL-Ne-okQ">
+                                                            <rect key="frame" x="76" y="25" width="320" height="60"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="planner_logo_light_mode" translatesAutoresizingMaskIntoConstraints="NO" id="iTB-CX-o3u">
+                                                            <rect key="frame" x="76" y="10" width="100" height="100"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="60" id="Lri-5s-MXQ"/>
+                                                                <constraint firstAttribute="width" constant="60" id="MyI-Qu-55Q"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TIm-qc-zWf" firstAttribute="top" secondItem="sta-uK-zbW" secondAttribute="top" constant="5" id="E1S-pv-qKO"/>
+                                                <constraint firstAttribute="trailing" secondItem="TIm-qc-zWf" secondAttribute="trailing" constant="5" id="GFV-ia-PYb"/>
+                                                <constraint firstAttribute="bottom" secondItem="TIm-qc-zWf" secondAttribute="bottom" constant="5" id="TD4-XU-Gef"/>
+                                                <constraint firstItem="TIm-qc-zWf" firstAttribute="leading" secondItem="sta-uK-zbW" secondAttribute="leading" constant="5" id="ZUK-9r-Q5Q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="120" id="uF9-NL-1Oo">
+                                        <rect key="frame" x="0.0" y="404.5" width="414" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uF9-NL-1Oo" id="YFF-JQ-cI1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ky-6X-NmM">
+                                                    <rect key="frame" x="5" y="5" width="404" height="110"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="map_logo_light_mode" translatesAutoresizingMaskIntoConstraints="NO" id="VE4-Kl-o0z">
+                                                            <rect key="frame" x="103" y="2" width="100" height="100"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="60" id="lsF-b7-bZR"/>
+                                                                <constraint firstAttribute="height" constant="60" id="ti5-Cx-TaE"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtN-mT-YbX">
+                                                            <rect key="frame" x="76" y="22" width="320" height="60"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="5ky-6X-NmM" secondAttribute="bottom" constant="5" id="JTz-3P-N2e"/>
+                                                <constraint firstItem="5ky-6X-NmM" firstAttribute="leading" secondItem="YFF-JQ-cI1" secondAttribute="leading" constant="5" id="RJ7-E8-6dC"/>
+                                                <constraint firstAttribute="trailing" secondItem="5ky-6X-NmM" secondAttribute="trailing" constant="5" id="ctU-xF-KNf"/>
+                                                <constraint firstItem="5ky-6X-NmM" firstAttribute="top" secondItem="YFF-JQ-cI1" secondAttribute="top" constant="5" id="v4p-9g-2OH"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -170,7 +275,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checklist_logo_light_mode" width="500" height="500"/>
         <image name="map_logo_light_mode" width="500" height="500"/>
+        <image name="planner_logo_light_mode" width="500" height="500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
