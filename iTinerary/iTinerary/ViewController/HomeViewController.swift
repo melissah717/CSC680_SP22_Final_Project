@@ -21,15 +21,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let title: String
         let imageName: String
+        let darkImage: String
     }
     
     let data: [ListOptions] = [
-        ListOptions(title: "Map", imageName: "Map"),
-        ListOptions(title: "Checklist", imageName: "Checklist"),
-        ListOptions(title: "Schedule", imageName: "Schedule"),
-        ListOptions(title: "Journal", imageName: "Journal"),
+        ListOptions(title: "Map", imageName: "Map", darkImage: "mapLogoLight"),
+        ListOptions(title: "Checklist", imageName: "Checklist", darkImage: "checklistLogoLight"),
+        ListOptions(title: "Schedule", imageName: "Schedule", darkImage: "scheduleLogoLight"),
+        ListOptions(title: "Journal", imageName: "Journal", darkImage: "journalLogoLight"),
     ]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         table.delegate = self
