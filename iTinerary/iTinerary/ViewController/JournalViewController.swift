@@ -11,6 +11,8 @@ import UIKit
 
 class JournalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
+    
     var models: [(title: String, note: String)] = []
     
     @IBOutlet weak var tableView: UITableView!
@@ -66,5 +68,59 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
         NoteViewController.noteTitle = model.title
         NoteViewController.note = model.note
         navigationController?.pushViewController(NoteViewController, animated: true)
+    }
+    
+    // Core Data
+    func getAllItems() {
+        
+        do {
+//            models2 = try context.fetch(ToDoListItem.fetchRequest())
+            
+            DispatchQueue.main.async {
+                
+                self.tableView.reloadData()
+            }
+        }
+        catch {
+            // Add any errors here
+        }
+    }
+    
+    func createItem(name: String) {
+        let newItem = ToDoListItem (context: context)
+        newItem.name = name
+        newItem.createdAt = Date()
+        
+        do {
+            try context.save()
+            getAllItems()
+        }
+        catch {
+            
+        }
+    }
+    
+    func deleteItem(item: ToDoListItem) {
+        context.delete(item)
+        
+        do {
+            try context.save()
+            getAllItems()
+        }
+        catch {
+            
+        }
+    }
+    
+    func updateItem(item: ToDoListItem, newName: String) {
+        item.name = newName
+        
+        do {
+            try context.save()
+            getAllItems()
+        }
+        catch {
+            
+        }
     }
 }

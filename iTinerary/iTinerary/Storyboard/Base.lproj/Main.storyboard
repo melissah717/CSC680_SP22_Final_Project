@@ -8,6 +8,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="RYd-nD-Ai9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a7J-9U-PNd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="b6u-yh-Zen">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zgm-dZ-AdS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xDO-fL-ZaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="65.625"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -115,33 +133,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qcy-kM-Koa"/>
+                    <connections>
+                        <segue destination="Ld2-Qw-yql" kind="show" identifier="ToMapSegue" id="JGx-kH-POv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v4B-g8-opZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2428" y="-173"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="RYd-nD-Ai9">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a7J-9U-PNd" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="b6u-yh-Zen">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zgm-dZ-AdS"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xDO-fL-ZaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="65.625"/>
-        </scene>
-        <!--List View Controller-->
+        <!--Schedule View Controller-->
         <scene sceneID="yMs-oF-9wk">
             <objects>
-                <viewController id="t8g-uJ-kBO" userLabel="List View Controller" customClass="MapListViewController" customModule="iTinerary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="t8g-uJ-kBO" userLabel="Schedule View Controller" customClass="ScheduleViewController" customModule="iTinerary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SUA-Sn-jm5" customClass="CoreL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,9 +152,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Yw3-0O-VCG"/>
-                    <connections>
-                        <segue destination="Ld2-Qw-yql" kind="show" identifier="ToMapSegue" id="Vv1-K6-b1b"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZD-1E-cfx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,10 +229,10 @@
             </objects>
             <point key="canvasLocation" x="3939" y="-173"/>
         </scene>
-        <!--Schedule View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="pta-Jt-h5U">
             <objects>
-                <viewController id="Ld2-Qw-yql" customClass="ScheduleViewController" customModule="iTinerary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ld2-Qw-yql" customClass="MapViewController" customModule="iTinerary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8eL-kB-dty">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYt-wn-6gN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3135" y="508"/>
+            <point key="canvasLocation" x="2428" y="522"/>
         </scene>
         <!--Entry View Controller-->
         <scene sceneID="nCG-PW-R98">

@@ -63,9 +63,13 @@ class CoreListViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = models[indexPath.row]
-        let sheet = UIAlertController(title: "Edit", message: nil, preferredStyle: .actionSheet)
+        let sheet = UIAlertController(title: "Options", message: nil, preferredStyle: .actionSheet)
         
         sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        sheet.addAction(UIAlertAction(title: "Go to Map", style: .default, handler: {
+            _ in
+            self.performSegue(withIdentifier: "ToMapSegue", sender: indexPath)
+        }))
         sheet.addAction(UIAlertAction(title: "Edit", style: .default, handler: { _ in
             let alert = UIAlertController(title: "Edit Item", message: "Enter Your Item", preferredStyle: .alert)
             
@@ -86,6 +90,17 @@ class CoreListViewController: UIViewController, UITableViewDelegate, UITableView
         }))
         
         present(sheet, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let mapViewController = segue.destination as? MapViewController else {
+            return
+        }
+        guard let indexPath = sender as? IndexPath else {
+            return
+        }
+        let address = models[indexPath.row].name
+        mapViewController.address = address
     }
     
     // Core Data
