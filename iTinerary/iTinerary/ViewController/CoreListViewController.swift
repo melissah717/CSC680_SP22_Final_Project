@@ -58,6 +58,7 @@ class CoreListViewController: UIViewController, UITableViewDelegate, UITableView
         let model = models[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = model.name
+        cell.accessoryType = model.isDone ? .checkmark : .none
         return cell
     }
     
@@ -69,6 +70,10 @@ class CoreListViewController: UIViewController, UITableViewDelegate, UITableView
         sheet.addAction(UIAlertAction(title: "Go to Map", style: .default, handler: {
             _ in
             self.performSegue(withIdentifier: "ToMapSegue", sender: indexPath)
+        }))
+        sheet.addAction(UIAlertAction(title: "Checkmark", style: .default, handler: {
+            _ in
+            self.markDone(item: item)
         }))
         sheet.addAction(UIAlertAction(title: "Edit", style: .default, handler: { _ in
             let alert = UIAlertController(title: "Edit Item", message: "Enter Your Item", preferredStyle: .alert)
@@ -147,6 +152,18 @@ class CoreListViewController: UIViewController, UITableViewDelegate, UITableView
     
     func updateItem(item: ToDoListItem, newName: String) {
         item.name = newName
+        
+        do {
+            try context.save()
+            getAllItems()
+        }
+        catch {
+            
+        }
+    }
+    
+    func markDone(item: ToDoListItem){
+        item.isDone = !item.isDone
         
         do {
             try context.save()

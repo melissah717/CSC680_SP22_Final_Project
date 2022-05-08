@@ -7,10 +7,11 @@
     </entity>
     <entity name="ToDoListItem" representedClassName="ToDoListItem" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="JournalItem" positionX="-63" positionY="0" width="128" height="74"/>
-        <element name="ToDoListItem" positionX="-63" positionY="-18" width="128" height="59"/>
+        <element name="ToDoListItem" positionX="-63" positionY="-18" width="128" height="74"/>
     </elements>
 </model>

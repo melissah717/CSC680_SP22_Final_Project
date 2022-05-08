@@ -91,7 +91,7 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
             let alert = UIAlertController(title: "Edit Item", message: "Enter Your Item", preferredStyle: .alert)
             
             alert.addTextField(configurationHandler: nil)
-            alert.textFields?.first?.text = item.name
+            alert.textFields?.first?.text = item.desc
             alert.addAction(UIAlertAction(title: "Save", style: .cancel, handler: { [weak self]_ in
                 guard let field = alert.textFields?.first, let newName = field.text, !newName.isEmpty else {
                     return
@@ -153,7 +153,7 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func updateItem(item: JournalItem, newName: String) {
-        item.name = newName
+        item.desc = newName
         
         do {
             try context.save()
