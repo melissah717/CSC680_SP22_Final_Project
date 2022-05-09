@@ -217,7 +217,9 @@ struct DateValue: Identifiable {
     var date: Date
 }
 
+
 extension Date {
+    
     func getAllDates() -> [Date] {
         let calendar = Calendar.current
         let startDate = calendar.date(from: Calendar.current.dateComponents([.year, .month], from: self))!
