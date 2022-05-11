@@ -76,7 +76,7 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
         sheet.addAction(UIAlertAction(title: "Inspect", style: .default, handler: {
             _ in
             tableView.deselectRow(at: indexPath, animated: true)
-            
+
             guard let NoteViewController = self.storyboard?.instantiateViewController(withIdentifier: "note") as? NoteViewController else {
                 return
             }
@@ -89,23 +89,23 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
         }))
         sheet.addAction(UIAlertAction(title: "Edit", style: .default, handler: { _ in
             let alert = UIAlertController(title: "Edit Item", message: "Enter Your Item", preferredStyle: .alert)
-            
+
             alert.addTextField(configurationHandler: nil)
             alert.textFields?.first?.text = item.desc
             alert.addAction(UIAlertAction(title: "Save", style: .cancel, handler: { [weak self]_ in
                 guard let field = alert.textFields?.first, let newName = field.text, !newName.isEmpty else {
                     return
                 }
-                
+
                 self?.updateItem(item: item, newName: newName)
             }))
-            
+
             self.present(alert, animated: true)
         }))
         sheet.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [weak self] _ in
             self?.deleteItem(item: item)
         }))
-        
+
         present(sheet, animated: true)
     }
     
