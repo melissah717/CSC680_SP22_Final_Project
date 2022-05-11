@@ -13,9 +13,7 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
     
-    var models: [(title: String, note: String)] = []
-    
-    private var models2 = [JournalItem]()
+    private var models = [JournalItem]()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var label: UILabel!
@@ -26,7 +24,7 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         title = "Journal"
         getAllItems()
-        if(!models2.isEmpty){
+        if(!models.isEmpty){
             self.label.isHidden = true
             self.tableView.isHidden = false
         }else{
@@ -59,18 +57,18 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        models2.count
+        models.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = models2[indexPath.row].name
-        cell.detailTextLabel?.text = models2[indexPath.row].desc
+        cell.textLabel?.text = models[indexPath.row].name
+        cell.detailTextLabel?.text = models[indexPath.row].desc
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = models2[indexPath.row]
+        let item = models[indexPath.row]
         let sheet = UIAlertController(title: "Options", message: nil, preferredStyle: .actionSheet)
         sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         sheet.addAction(UIAlertAction(title: "Inspect", style: .default, handler: {
@@ -80,7 +78,7 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
             guard let NoteViewController = self.storyboard?.instantiateViewController(withIdentifier: "note") as? NoteViewController else {
                 return
             }
-            let model = self.models2[indexPath.row]
+            let model = self.models[indexPath.row]
             NoteViewController.navigationItem.largeTitleDisplayMode = .never
             NoteViewController.title = "Note"
             NoteViewController.noteTitle = model.name!
@@ -88,7 +86,7 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.navigationController?.pushViewController(NoteViewController, animated: true)
         }))
         sheet.addAction(UIAlertAction(title: "Edit", style: .default, handler: { _ in
-            let alert = UIAlertController(title: "Edit Item", message: "Enter Your Item", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Edit Note", message: "Enter Your Changes", preferredStyle: .alert)
 
             alert.addTextField(configurationHandler: nil)
             alert.textFields?.first?.text = item.desc
@@ -113,7 +111,7 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
     func getAllItems() {
         
         do {
-            models2 = try context.fetch(JournalItem.fetchRequest())
+            models = try context.fetch(JournalItem.fetchRequest())
             
             DispatchQueue.main.async {
                 

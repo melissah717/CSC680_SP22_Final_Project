@@ -33,7 +33,7 @@ var tasks: [ReminderData] = [
     
         Reminder(title: "Study for 680 Final"),
         Reminder(title: "Finish 648 Final Project")
-    ], remindDate: getSampleDate(offset: -15)),
+    ], remindDate: getSampleDate(offset: -2)),
     
     ReminderData(remind: [
     

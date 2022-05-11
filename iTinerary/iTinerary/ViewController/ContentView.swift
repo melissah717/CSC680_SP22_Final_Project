@@ -104,7 +104,7 @@ struct DatePicker: View {
                     CardView(value: value)
                         .background(
                             Capsule()
-                                .fill(Color("Red"))
+                                .fill(Color("Pink"))
                                 .padding(.horizontal, 8)
                                 .opacity(isSameDay(date1: value.date, date2: currentDate) ? 1 : 0)
                         ).onTapGesture {
@@ -113,7 +113,7 @@ struct DatePicker: View {
                 }
             }
             VStack(spacing: 15) {
-                Text("Create New")
+                Text("Reminders")
                     .font(.title2.bold())
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.vertical, 20)
@@ -158,7 +158,7 @@ struct DatePicker: View {
                         .frame(maxWidth: .infinity)
                     Spacer()
                     Circle()
-                        .fill(isSameDay(date1: task.remindDate, date2: currentDate) ? .white : Color("Red"))
+                        .fill(isSameDay(date1: task.remindDate, date2: currentDate) ? .white : Color("Orange"))
                         .frame(width: 8, height: 8)
                 } else {
                     Text("\(value.day)")
