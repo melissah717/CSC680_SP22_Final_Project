@@ -133,9 +133,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qcy-kM-Koa"/>
-                    <connections>
-                        <segue destination="Ld2-Qw-yql" kind="show" identifier="ToMapSegue" id="JGx-kH-POv"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v4B-g8-opZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,6 +220,7 @@
                     <connections>
                         <outlet property="label" destination="MlM-7v-HHr" id="STw-6j-NAH"/>
                         <outlet property="tableView" destination="9HF-jf-5LY" id="eIN-cB-dog"/>
+                        <segue destination="Ld2-Qw-yql" kind="show" identifier="ToMapSegue" id="vpQ-HA-TUn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yfa-qX-Iv0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -243,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYt-wn-6gN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2428" y="522"/>
+            <point key="canvasLocation" x="4749" y="66"/>
         </scene>
         <!--Entry View Controller-->
         <scene sceneID="nCG-PW-R98">

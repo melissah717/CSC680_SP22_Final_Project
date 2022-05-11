@@ -100,11 +100,26 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
 
             self.present(alert, animated: true)
         }))
+        sheet.addAction(UIAlertAction(title: "Go to Map", style: .default, handler: {
+            _ in
+            self.performSegue(withIdentifier: "ToMapSegue", sender: indexPath)
+        }))
         sheet.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [weak self] _ in
             self?.deleteItem(item: item)
         }))
 
         present(sheet, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let mapViewController = segue.destination as? MapViewController else {
+            return
+        }
+        guard let indexPath = sender as? IndexPath else {
+            return
+        }
+        let address = models[indexPath.row].name
+        mapViewController.address = address
     }
     
     // Core Data
