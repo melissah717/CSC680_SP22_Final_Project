@@ -20,7 +20,9 @@ struct ContentView: View {
         }
         .safeAreaInset(edge: .bottom) {
             HStack {
-                Button(action: {}, label: {
+                Button(action: {
+                    
+                }, label: {
                     Text("Create New")
                         .fontWeight(.bold)
                         .padding(.vertical)
@@ -39,12 +41,6 @@ struct ContentView: View {
             .padding(.top, 10)
             .foregroundColor(.white)
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
 
@@ -74,17 +70,17 @@ struct DatePicker: View {
                 }, label: {
                     Image(systemName: "chevron.left")
                         .font(.title2)
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                 })
 
                 Button(action: {
                     withAnimation {
-                        currentMonth -= 1
+                        currentMonth += 1
                     }
                 }, label: {
                     Image(systemName: "chevron.right")
                         .font(.title2)
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                 })
             }
             .padding(.horizontal)
