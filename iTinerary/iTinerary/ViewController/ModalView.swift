@@ -31,6 +31,11 @@ struct ModalView: View {
     
     var body: some View {
         VStack {
+            Text("New Reminder")
+                .bold()
+                .padding()
+                .foregroundColor(Color.primary)
+                
             TextField("Title", text: $reminderName)
                 .padding()
                 .foregroundColor(Color.primary)
@@ -38,27 +43,30 @@ struct ModalView: View {
             Text(getDate(date: self.reminderDate))
                 .padding()
                 .foregroundColor(Color.primary)
-            
-            Button("Save"){
-                saveReminder()
-                self.showModal.toggle()
-                
+        }
+        .safeAreaInset(edge: .bottom) {
+            HStack {
+                Button("Save"){
+                    saveReminder()
+                    self.showModal.toggle()
+                }
+                .padding(.vertical)
+                .frame(maxWidth: .infinity)
+                .background(Color("Blue"), in: Capsule())
+                .foregroundColor(Color.primary)
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                Button("Dismiss") {
+                    self.showModal.toggle()
+                }
+                .padding(.vertical)
+                .frame(maxWidth: .infinity)
+                .background(Color("Orange"), in: Capsule())
+                .foregroundColor(Color.primary)
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
             }
-            .padding(10)
-            .frame(maxWidth: .infinity)
-            .background(Color.blue)
-            .foregroundColor(Color.primary)
-            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-            Button("Dismiss") {
-                self.showModal.toggle()
-            }
-            .padding(10)
-            .frame(maxWidth: .infinity)
-            .background(Color.blue)
-            .foregroundColor(Color.primary)
-            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+            .padding(.horizontal)
+            .padding(.top, 10)
+            .foregroundColor(.white)
         }
     }
 }
-
-
