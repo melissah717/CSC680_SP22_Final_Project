@@ -136,7 +136,7 @@ struct DatePicker: View {
                         .padding(.vertical, 10)
                         .padding(.horizontal)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .background(Color("Blue").opacity(0.5).cornerRadius(10))
+                        .background(Color("Yellow").opacity(0.5).cornerRadius(10))
                     }
                 }
                 else {
