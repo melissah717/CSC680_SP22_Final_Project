@@ -12,11 +12,13 @@ struct ContentView: View {
     @State var currentDate: Date = Date()
     
     @State private var showModal = false
+    
+    @State var refresh = false
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 10) {
-                DatePicker(currentDate: $currentDate)
+                DatePicker(currentDate: $currentDate, refresh: $refresh)
             }
             .padding(.vertical)
         }
@@ -24,6 +26,7 @@ struct ContentView: View {
             HStack {
                 Button(action: {
                     self.showModal.toggle()
+                    refresh.toggle()
                 }, label: {
                     Text("Create New")
                         .fontWeight(.bold)
@@ -31,9 +34,11 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity)
                         .background(Color("Blue"), in: Capsule())
                 }).sheet(isPresented: $showModal) {
-                    ModalView(showModal: self.$showModal, date: currentDate)
+                    ModalView(showModal: self.$showModal, reminderDate: currentDate)
                 }
-                Button(action: {}, label: {
+                Button(action: {
+                    
+                }, label: {
                     Text("Reminders")
                         .fontWeight(.bold)
                         .padding(.vertical)
@@ -46,40 +51,13 @@ struct ContentView: View {
             .foregroundColor(.white)
         }
     }
-    
 }
-
-func createReminder(){
-    
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
-struct Entry2ViewController: UIViewControllerRepresentable {
-    typealias UIViewControllerType = EntryViewController
-
-    func makeUIViewController(context: UIViewControllerRepresentableContext<Entry2ViewController>) -> Entry2ViewController.UIViewControllerType {
-
-    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    let mainViewController: EntryViewController = mainStoryboard.instantiateViewController(withIdentifier: "CameraController") as! EntryViewController
-      return mainViewController
-
-    }
-
-    func updateUIViewController(_ uiViewController: Entry2ViewController.UIViewControllerType, context: UIViewControllerRepresentableContext<Entry2ViewController>) {
-        //
-    }
-}
-
 
 struct DatePicker: View {
 
     @Binding var currentDate: Date
     @State var currentMonth: Int = 0
+    @Binding var refresh: Bool
 
     var body: some View {
         VStack(spacing: 15) {

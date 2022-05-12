@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-
+@objc(JournalItem)
 public class JournalItem: NSManagedObject {
 
 }

@@ -152,13 +152,6 @@
 			path = JournalItem;
 			sourceTree = "<group>";
 		};
-		F4693230282DAC0D0097E936 /* ReminderItem */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ReminderItem;
-			sourceTree = "<group>";
-		};
 		F48B731327DD2A7800DDFA20 = {
 			isa = PBXGroup;
 			children = (
@@ -183,7 +176,6 @@
 				2F46A03F2823BD4700D43730 /* Delegate */,
 				2F46A0412823BE7300D43730 /* HelperFiles */,
 				2F46A03E2823BD2D00D43730 /* Storyboard */,
-				F4693230282DAC0D0097E936 /* ReminderItem */,
 				F4008FD928262DB600A9848F /* JournalItem */,
 				28BCA2E42820A58100321165 /* ToDoListItem */,
 				2F46A0402823BE3200D43730 /* ViewController */,

@@ -11,21 +11,15 @@ import SwiftUI
 struct ModalView: View {
     
     @Binding var showModal: Bool
-    @State var title: String = ""
-    @State var date: Date
+    @State var reminderName: String = ""
+    @State var reminderDate: Date
     let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
     
     private func saveReminder(){
-//        let newItem = ReminderItem (context: context)
-//        newItem.title = name
-//        newItem.date = Date()
-        
-        do {
-            try context.save()
-        }
-        catch {
+        tasks.append(ReminderData(remind: [
             
-        }
+            Reminder(title: reminderName)
+        ], remindDate: reminderDate))
     }
     
     private func getDate(date: Date) -> String{
@@ -37,16 +31,18 @@ struct ModalView: View {
     
     var body: some View {
         VStack {
-            TextField("Title", text: $title)
+            TextField("Title", text: $reminderName)
                 .padding()
                 .foregroundColor(Color.primary)
             
-            Text(getDate(date: self.date))
+            Text(getDate(date: self.reminderDate))
                 .padding()
                 .foregroundColor(Color.primary)
             
             Button("Save"){
                 saveReminder()
+                self.showModal.toggle()
+                
             }
             .padding(10)
             .frame(maxWidth: .infinity)
