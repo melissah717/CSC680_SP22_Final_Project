@@ -12,6 +12,7 @@
 		28BCA2E22820A56E00321165 /* ToDoListItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BCA2E02820A56E00321165 /* ToDoListItem+CoreDataClass.swift */; };
 		28BCA2E32820A56E00321165 /* ToDoListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BCA2E12820A56E00321165 /* ToDoListItem+CoreDataProperties.swift */; };
 		28BCA2E6282378F600321165 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BCA2E5282378F600321165 /* JournalViewController.swift */; };
+		2F0FB53B282DC411004F32AC /* ReminderModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0FB53A282DC411004F32AC /* ReminderModalView.swift */; };
 		2F46A037282237FD00D43730 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F46A036282237FD00D43730 /* LaunchScreen.storyboard */; };
 		2F46A03B2823B37A00D43730 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F46A03A2823B37A00D43730 /* CustomTableViewCell.swift */; };
 		2F46A04528288BC900D43730 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F46A04428288BC900D43730 /* ContentView.swift */; };
@@ -38,6 +39,7 @@
 		28BCA2E02820A56E00321165 /* ToDoListItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		28BCA2E12820A56E00321165 /* ToDoListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		28BCA2E5282378F600321165 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		2F0FB53A282DC411004F32AC /* ReminderModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModalView.swift; sourceTree = "<group>"; };
 		2F46A036282237FD00D43730 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F46A03A2823B37A00D43730 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		2F46A04428288BC900D43730 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				2F46A04428288BC900D43730 /* ContentView.swift */,
+				2F0FB53A282DC411004F32AC /* ReminderModalView.swift */,
 				F4DD1F67282CE4CE004E4CE4 /* ModalView.swift */,
 				2F46A04628288C0200D43730 /* Reminder.swift */,
 				28BCA2DB2820A48200321165 /* CoreListViewController.swift */,
@@ -311,6 +314,7 @@
 				F48B732027DD2A7800DDFA20 /* AppDelegate.swift in Sources */,
 				28BCA2E32820A56E00321165 /* ToDoListItem+CoreDataProperties.swift in Sources */,
 				F41F1704282638A40095472E /* JournalItem+CoreDataClass.swift in Sources */,
+				2F0FB53B282DC411004F32AC /* ReminderModalView.swift in Sources */,
 				F48B732227DD2A7800DDFA20 /* SceneDelegate.swift in Sources */,
 				F4D6DDB027DD6FEF00D5739E /* MapViewController.swift in Sources */,
 				28BCA2E22820A56E00321165 /* ToDoListItem+CoreDataClass.swift in Sources */,

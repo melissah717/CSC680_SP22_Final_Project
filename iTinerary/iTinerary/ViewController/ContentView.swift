@@ -44,7 +44,9 @@ struct ContentView: View {
                         .padding(.vertical)
                         .frame(maxWidth: .infinity)
                         .background(Color("Orange"), in: Capsule())
-                })
+                }).sheet(isPresented: $showModal) {
+                    ReminderModalView(showModal: self.$showModal, reminderDate: currentDate)
+                }
             }
             .padding(.horizontal)
             .padding(.top, 10)
