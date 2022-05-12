@@ -9,31 +9,42 @@ import Foundation
 import SwiftUI
 
 struct ModalView: View {
-    // 1.
+    
     @Binding var showModal: Bool
     @State var title: String = ""
     @State var date: Date
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
     
     private func saveReminder(){
+//        let newItem = ReminderItem (context: context)
+//        newItem.title = name
+//        newItem.date = Date()
         
+        do {
+            try context.save()
+        }
+        catch {
+            
+        }
     }
     
     private func getDate(date: Date) -> String{
         let formatter = DateFormatter()
-            formatter.locale = .current
-            formatter.dateFormat = "MMMM d, yyyy"
-            return formatter.string(from: date)
+        formatter.locale = .current
+        formatter.dateFormat = "MMMM d, yyyy"
+        return formatter.string(from: date)
     }
     
     var body: some View {
         VStack {
             TextField("Title", text: $title)
                 .padding()
-            // 2.
+                .foregroundColor(Color.primary)
+            
             Text(getDate(date: self.date))
                 .padding()
                 .foregroundColor(Color.primary)
-                 
+            
             Button("Save"){
                 saveReminder()
             }
