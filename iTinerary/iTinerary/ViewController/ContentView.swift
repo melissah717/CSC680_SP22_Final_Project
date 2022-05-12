@@ -43,7 +43,7 @@ struct ContentView: View {
                         .fontWeight(.bold)
                         .padding(.vertical)
                         .frame(maxWidth: .infinity)
-                        .background(Color("Yellow"), in: Capsule())
+                        .background(Color("Orange"), in: Capsule())
                 })
             }
             .padding(.horizontal)
@@ -164,7 +164,7 @@ struct DatePicker: View {
                         .frame(maxWidth: .infinity)
                     Spacer()
                     Circle()
-                        .fill(isSameDay(date1: task.remindDate, date2: currentDate) ? .white : Color("Orange"))
+                        .fill(isSameDay(date1: task.remindDate, date2: currentDate) ? .white : Color("Yellow"))
                         .frame(width: 8, height: 8)
                 } else {
                     Text("\(value.day)")
