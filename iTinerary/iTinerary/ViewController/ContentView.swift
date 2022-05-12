@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
 
     @State var currentDate: Date = Date()
+    
+    @State private var showModal = false
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -21,14 +23,16 @@ struct ContentView: View {
         .safeAreaInset(edge: .bottom) {
             HStack {
                 Button(action: {
-                    
+                    self.showModal.toggle()
                 }, label: {
                     Text("Create New")
                         .fontWeight(.bold)
                         .padding(.vertical)
                         .frame(maxWidth: .infinity)
                         .background(Color("Blue"), in: Capsule())
-                })
+                }).sheet(isPresented: $showModal) {
+                    ModalView(showModal: self.$showModal, date: currentDate)
+                }
                 Button(action: {}, label: {
                     Text("Reminders")
                         .fontWeight(.bold)
@@ -42,7 +46,35 @@ struct ContentView: View {
             .foregroundColor(.white)
         }
     }
+    
 }
+
+func createReminder(){
+    
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+struct Entry2ViewController: UIViewControllerRepresentable {
+    typealias UIViewControllerType = EntryViewController
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<Entry2ViewController>) -> Entry2ViewController.UIViewControllerType {
+
+    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    let mainViewController: EntryViewController = mainStoryboard.instantiateViewController(withIdentifier: "CameraController") as! EntryViewController
+      return mainViewController
+
+    }
+
+    func updateUIViewController(_ uiViewController: Entry2ViewController.UIViewControllerType, context: UIViewControllerRepresentableContext<Entry2ViewController>) {
+        //
+    }
+}
+
 
 struct DatePicker: View {
 

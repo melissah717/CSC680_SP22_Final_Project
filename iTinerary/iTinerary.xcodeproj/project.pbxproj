@@ -29,6 +29,7 @@
 		F4A29CE42824705B003E67C5 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A29CE32824705B003E67C5 /* NoteViewController.swift */; };
 		F4A29CE6282476AD003E67C5 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A29CE5282476AD003E67C5 /* EntryViewController.swift */; };
 		F4D6DDB027DD6FEF00D5739E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D6DDAF27DD6FEF00D5739E /* MapViewController.swift */; };
+		F4DD1F68282CE4CE004E4CE4 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD1F67282CE4CE004E4CE4 /* ModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		F4A29CE32824705B003E67C5 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		F4A29CE5282476AD003E67C5 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		F4D6DDAF27DD6FEF00D5739E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F4DD1F67282CE4CE004E4CE4 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				2F46A04428288BC900D43730 /* ContentView.swift */,
+				F4DD1F67282CE4CE004E4CE4 /* ModalView.swift */,
 				2F46A04628288C0200D43730 /* Reminder.swift */,
 				28BCA2DB2820A48200321165 /* CoreListViewController.swift */,
 				F48B732327DD2A7800DDFA20 /* HomeViewController.swift */,
@@ -312,6 +315,7 @@
 				F4D6DDB027DD6FEF00D5739E /* MapViewController.swift in Sources */,
 				28BCA2E22820A56E00321165 /* ToDoListItem+CoreDataClass.swift in Sources */,
 				F4A29CE6282476AD003E67C5 /* EntryViewController.swift in Sources */,
+				F4DD1F68282CE4CE004E4CE4 /* ModalView.swift in Sources */,
 				2F46A04528288BC900D43730 /* ContentView.swift in Sources */,
 				2F8BCE02281D0DFF0003C2B1 /* ResultsViewController.swift in Sources */,
 				F43144E72821D80400D33C95 /* ScheduleViewController.swift in Sources */,
