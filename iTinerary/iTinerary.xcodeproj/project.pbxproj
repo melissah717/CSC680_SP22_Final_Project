@@ -15,7 +15,7 @@
 		2F0FB53B282DC411004F32AC /* ReminderModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0FB53A282DC411004F32AC /* ReminderModalView.swift */; };
 		2F46A037282237FD00D43730 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F46A036282237FD00D43730 /* LaunchScreen.storyboard */; };
 		2F46A03B2823B37A00D43730 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F46A03A2823B37A00D43730 /* CustomTableViewCell.swift */; };
-		2F46A04528288BC900D43730 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F46A04428288BC900D43730 /* ContentView.swift */; };
+		2F46A04528288BC900D43730 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F46A04428288BC900D43730 /* CalendarView.swift */; };
 		2F46A04728288C0200D43730 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F46A04628288C0200D43730 /* Reminder.swift */; };
 		2F8BCE02281D0DFF0003C2B1 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8BCE01281D0DFF0003C2B1 /* ResultsViewController.swift */; };
 		2F8BCE04281D0E820003C2B1 /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8BCE03281D0E820003C2B1 /* GooglePlacesManager.swift */; };
@@ -30,7 +30,7 @@
 		F4A29CE42824705B003E67C5 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A29CE32824705B003E67C5 /* NoteViewController.swift */; };
 		F4A29CE6282476AD003E67C5 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A29CE5282476AD003E67C5 /* EntryViewController.swift */; };
 		F4D6DDB027DD6FEF00D5739E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D6DDAF27DD6FEF00D5739E /* MapViewController.swift */; };
-		F4DD1F68282CE4CE004E4CE4 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD1F67282CE4CE004E4CE4 /* ModalView.swift */; };
+		F4DD1F68282CE4CE004E4CE4 /* CreateModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD1F67282CE4CE004E4CE4 /* CreateModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,7 @@
 		2F0FB53A282DC411004F32AC /* ReminderModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModalView.swift; sourceTree = "<group>"; };
 		2F46A036282237FD00D43730 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F46A03A2823B37A00D43730 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		2F46A04428288BC900D43730 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2F46A04428288BC900D43730 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		2F46A04628288C0200D43730 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		2F8BCE01281D0DFF0003C2B1 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		2F8BCE03281D0E820003C2B1 /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		F4A29CE32824705B003E67C5 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		F4A29CE5282476AD003E67C5 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		F4D6DDAF27DD6FEF00D5739E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		F4DD1F67282CE4CE004E4CE4 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		F4DD1F67282CE4CE004E4CE4 /* CreateModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +105,9 @@
 		2F46A0402823BE3200D43730 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2F46A04428288BC900D43730 /* ContentView.swift */,
+				2F46A04428288BC900D43730 /* CalendarView.swift */,
 				2F0FB53A282DC411004F32AC /* ReminderModalView.swift */,
-				F4DD1F67282CE4CE004E4CE4 /* ModalView.swift */,
+				F4DD1F67282CE4CE004E4CE4 /* CreateModalView.swift */,
 				2F46A04628288C0200D43730 /* Reminder.swift */,
 				28BCA2DB2820A48200321165 /* CoreListViewController.swift */,
 				F48B732327DD2A7800DDFA20 /* HomeViewController.swift */,
@@ -319,8 +319,8 @@
 				F4D6DDB027DD6FEF00D5739E /* MapViewController.swift in Sources */,
 				28BCA2E22820A56E00321165 /* ToDoListItem+CoreDataClass.swift in Sources */,
 				F4A29CE6282476AD003E67C5 /* EntryViewController.swift in Sources */,
-				F4DD1F68282CE4CE004E4CE4 /* ModalView.swift in Sources */,
-				2F46A04528288BC900D43730 /* ContentView.swift in Sources */,
+				F4DD1F68282CE4CE004E4CE4 /* CreateModalView.swift in Sources */,
+				2F46A04528288BC900D43730 /* CalendarView.swift in Sources */,
 				2F8BCE02281D0DFF0003C2B1 /* ResultsViewController.swift in Sources */,
 				F43144E72821D80400D33C95 /* ScheduleViewController.swift in Sources */,
 				2F46A04728288C0200D43730 /* Reminder.swift in Sources */,

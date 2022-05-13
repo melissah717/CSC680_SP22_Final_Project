@@ -2,7 +2,7 @@
 //  EntryViewController.swift
 //  iTinerary
 //
-//  Created by Melissa Ho on 5/5/22.
+//  Created by Ze Lei on 5/5/22.
 //
 // resource: https://www.youtube.com/watch?v=pZVXENscpTM
 

@@ -1,5 +1,5 @@
 //
-//  ModalView.swift
+//  CreateModalView.swift
 //  iTinerary
 //
 //  Created by Ze Lei on 5/11/22.
@@ -8,12 +8,11 @@
 import Foundation
 import SwiftUI
 
-struct ModalView: View {
+struct CreateModalView: View {
     
     @Binding var showModal: Bool
     @State var reminderName: String = ""
     @State var reminderDate: Date
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
     
     private func saveReminder(){
         tasks.append(ReminderData(remind: [

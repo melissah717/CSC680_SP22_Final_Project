@@ -1,16 +1,15 @@
-////
-////  ScheduleViewController.swift
-////  iTinerary
-////
-////  Created by Samantha Saxton-Getty on 5/8/22.
-////
-//// Resource:
 //
+//  ResultsViewController.swift
+//  iTinerary
+//
+//  Created by Samantha Saxton-Getty on 4/29/22.
+//
+
 import Foundation
 import UIKit
 import SwiftUI
 
-class ScheduleViewController: UIHostingController<ContentView> {
+class ScheduleViewController: UIHostingController<CalendarView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +17,7 @@ class ScheduleViewController: UIHostingController<ContentView> {
     }
         
     required init?(coder: NSCoder) {
-        super.init(coder: coder, rootView: ContentView())
+        super.init(coder: coder, rootView: CalendarView())
             
     }
     
