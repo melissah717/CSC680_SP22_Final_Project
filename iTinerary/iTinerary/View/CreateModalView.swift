@@ -14,19 +14,21 @@ struct CreateModalView: View {
     @State var reminderName: String = ""
     @State var reminderDate: Date
     
+    @StateObject var store = taskStore()
+    
     func isSameDay(date1: Date, date2: Date) -> Bool {
         let calendar = Calendar.current
         return calendar.isDate(date1, inSameDayAs: date2)
     }
     
     private func saveReminder(){
-        if let taskIndex = tasks.firstIndex(where: { task in
+        if let taskIndex = store.tasks.firstIndex(where: { task in
             return isSameDay(date1: task.remindDate, date2: reminderDate)
         }){
-            tasks[taskIndex].addReminder(reminder: Reminder(title: reminderName))
+            store.tasks[taskIndex].addReminder(reminder: Reminder(title: reminderName))
             
         }else{
-            tasks.append(ReminderData(reminders: [
+            store.tasks.append(ReminderData(reminders: [
                 
                 Reminder(title: reminderName)
             ], remindDate: reminderDate))

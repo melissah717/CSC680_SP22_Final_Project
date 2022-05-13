@@ -15,10 +15,12 @@ struct CalendarView: View {
     @State private var showModal2 = false
     @State var refresh = false
     
+    @StateObject var store = taskStore()
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 10) {
-                DatePicker(currentDate: $currentDate, refresh: $refresh)
+                DatePicker(currentDate: $currentDate, refresh: $refresh, store: store)
             }
             .padding(.vertical)
         }
@@ -33,7 +35,7 @@ struct CalendarView: View {
                         .frame(maxWidth: .infinity)
                         .background(Color("Orange"), in: Capsule())
                 }).sheet(isPresented: $showModal2) {
-                    ReminderModalView(showModal: self.$showModal2)
+                    ReminderModalView(showModal: self.$showModal2, store: store)
                 }
                 Button(action: {
                     self.showModal.toggle()
@@ -45,7 +47,7 @@ struct CalendarView: View {
                         .frame(maxWidth: .infinity)
                         .background(Color("Blue"), in: Capsule())
                 }).sheet(isPresented: $showModal) {
-                    CreateModalView(showModal: self.$showModal, reminderDate: currentDate)
+                    CreateModalView(showModal: self.$showModal, reminderDate: currentDate, store: store)
                 }
             }
             .padding(.horizontal)
@@ -60,6 +62,8 @@ struct DatePicker: View {
     @Binding var currentDate: Date
     @State var currentMonth: Int = 0
     @Binding var refresh: Bool
+    
+    @StateObject var store = taskStore()
     
     var body: some View {
         VStack(spacing: 15) {
@@ -126,7 +130,7 @@ struct DatePicker: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.vertical, 20)
                 
-                if let task = tasks.first(where: { task in
+                if let task = store.tasks.first(where: { task in
                     return isSameDay(date1: task.remindDate, date2: currentDate)
                 })
                 {
@@ -157,7 +161,7 @@ struct DatePicker: View {
         VStack {
             if value.day != -1 {
                 
-                if let task = tasks.first(where: { task in
+                if let task = store.tasks.first(where: { task in
                     return isSameDay(date1: task.remindDate, date2: value.date)
                 }) {
                     Text("\(value.day)")

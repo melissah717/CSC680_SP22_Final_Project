@@ -12,6 +12,8 @@ struct ReminderModalView: View {
     
     @Binding var showModal: Bool
     
+    @StateObject var store = taskStore()
+    
     private func getDate(date: Date) -> String{
         let formatter = DateFormatter()
         formatter.locale = .current
@@ -28,11 +30,11 @@ struct ReminderModalView: View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
                 
-                if tasks.isEmpty {
+                if store.tasks.isEmpty {
                     Text("No Reminders Found!")
                 }
                 else {
-                        ForEach(tasks) { task in
+                    ForEach(store.tasks) { task in
                             ForEach(task.reminders) { remind in
                                 VStack(alignment: .leading, spacing: 10) {
                                     Text(getDate(date: task.remindDate))

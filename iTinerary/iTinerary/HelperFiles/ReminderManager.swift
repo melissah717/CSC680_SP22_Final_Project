@@ -32,17 +32,20 @@ func getSampleDate(offset: Int) -> Date {
     return date ?? Date()
 }
 
-var tasks: [ReminderData] = [
-    
-    ReminderData(reminders: [
-    
-        Reminder(title: "Study for 680 Final"),
-        Reminder(title: "Finish 648 Final Project")
-    ], remindDate: getSampleDate(offset: -2)),
-    
-    ReminderData(reminders: [
-    
-        Reminder(title: "Buy Groceries"),
-        Reminder(title: "Take the Dog to Vet")
-    ], remindDate: getSampleDate(offset: 4))
-]
+class taskStore: ObservableObject{
+    @Published var tasks: [ReminderData] = [
+        
+        ReminderData(reminders: [
+        
+            Reminder(title: "Study for 680 Final"),
+            Reminder(title: "Finish 648 Final Project")
+        ], remindDate: getSampleDate(offset: -2)),
+        
+        ReminderData(reminders: [
+        
+            Reminder(title: "Buy Groceries"),
+            Reminder(title: "Take the Dog to Vet")
+        ], remindDate: getSampleDate(offset: 4))
+    ]
+}
+
