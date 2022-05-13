@@ -45,7 +45,7 @@ struct CalendarView: View {
                         .fontWeight(.bold)
                         .padding(.vertical)
                         .frame(maxWidth: .infinity)
-                        .background(Color("Blue"), in: Capsule())
+                        .background(Color("Bloo"), in: Capsule())
                 }).sheet(isPresented: $showModal) {
                     CreateModalView(showModal: self.$showModal, reminderDate: currentDate, store: store)
                 }

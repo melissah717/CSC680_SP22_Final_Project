@@ -79,7 +79,7 @@ struct CreateModalView: View {
                         .fontWeight(.bold)
                         .padding(.vertical)
                         .frame(maxWidth: .infinity)
-                        .background(Color("Blue"), in: Capsule())
+                        .background(Color("Bloo"), in: Capsule())
                         .foregroundColor(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                 })
