@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, UISearchResultsUpdating {
+class MapViewController: UIViewController, UISearchResultsUpdating, MKMapViewDelegate {
     
     var address: String?
     let mapView = MKMapView()
@@ -20,6 +20,7 @@ class MapViewController: UIViewController, UISearchResultsUpdating {
         view.addSubview(mapView)
         searchVC.searchBar.backgroundColor = .secondarySystemBackground
         searchVC.searchResultsUpdater = self
+        mapView.delegate = self
         navigationItem.searchController = searchVC
         title = "Map"
         
@@ -37,8 +38,8 @@ class MapViewController: UIViewController, UISearchResultsUpdating {
         guard let query = searchController.searchBar.text,
               !query.trimmingCharacters(in: .whitespaces).isEmpty,
               let resultsVC = searchController.searchResultsController as? ResultsViewController else {
-            return
-        }
+                  return
+              }
         
         resultsVC.delegate = self
         
@@ -54,6 +55,21 @@ class MapViewController: UIViewController, UISearchResultsUpdating {
             }
         }
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "custom")
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "custom")
+            annotationView?.canShowCallout = true
+        } else {
+            annotationView?.annotation = annotation
+        }
+        
+        annotationView?.image = UIImage(named: "lemons")
+        
+        return annotationView
+    }
+    
 }
 
 extension MapViewController: ResultsViewControllerDelegate {
