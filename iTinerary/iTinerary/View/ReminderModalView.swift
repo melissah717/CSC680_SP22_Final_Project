@@ -45,6 +45,7 @@ struct ReminderModalView: View {
                         .padding(.horizontal)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .background(Color("Yellow").opacity(0.5).cornerRadius(10))
+                        .foregroundColor(Color.primary)
                 }
             }
         }
