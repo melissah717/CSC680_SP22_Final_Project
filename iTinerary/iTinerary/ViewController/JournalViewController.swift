@@ -51,10 +51,7 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
             
         }
         navigationController?.pushViewController(EntryViewController, animated: true)
-        
-        
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         models.count
@@ -124,7 +121,6 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // Core Data
     func getAllItems() {
-        
         do {
             models = try context.fetch(JournalItem.fetchRequest())
             

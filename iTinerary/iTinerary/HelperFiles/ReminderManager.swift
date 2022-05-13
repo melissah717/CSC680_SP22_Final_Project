@@ -4,7 +4,7 @@
 //
 //  Created by Samantha Saxton-Getty on 5/8/22.
 //
-//Resource: 
+//  Resource:
 
 import SwiftUI
 
@@ -42,5 +42,3 @@ var tasks: [ReminderData] = [
         Reminder(title: "Take the Dog to Vet")
     ], remindDate: getSampleDate(offset: 4))
 ]
-
-

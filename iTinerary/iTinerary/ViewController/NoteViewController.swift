@@ -4,7 +4,7 @@
 //
 //  Created by Melissa Ho on 5/5/22.
 //
-// Resource: https://www.youtube.com/watch?v=pZVXENscpTM
+//  Resource: https://www.youtube.com/watch?v=pZVXENscpTM
 
 import Foundation
 import UIKit
@@ -22,5 +22,4 @@ class NoteViewController: UIViewController{
         titleLabel.text = noteTitle
         noteText.text = note
     }
-    
 }

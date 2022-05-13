@@ -12,9 +12,7 @@ import MapKit
 class MapViewController: UIViewController, UISearchResultsUpdating {
     
     var address: String?
-    
     let mapView = MKMapView()
-    
     let searchVC = UISearchController(searchResultsController: ResultsViewController())
     
     override func viewDidLoad() {
@@ -23,8 +21,6 @@ class MapViewController: UIViewController, UISearchResultsUpdating {
         searchVC.searchBar.backgroundColor = .secondarySystemBackground
         searchVC.searchResultsUpdater = self
         navigationItem.searchController = searchVC
-        
-//        let initialLocation = CLLocationCoordinate2D(latitude: 37.77986, longitude: -122.42905)
         title = "Map"
         
         if(address != nil){

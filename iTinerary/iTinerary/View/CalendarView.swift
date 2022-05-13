@@ -4,18 +4,15 @@
 //
 //  Created by Samantha Saxton-Getty on 5/8/22.
 //
-//Resource: 
+//  Resource: https://www.youtube.com/watch?v=UZI2dvLoPr8
 
 import SwiftUI
 
 struct CalendarView: View {
     
     @State var currentDate: Date = Date()
-    
     @State private var showModal = false
-    
     @State private var showModal2 = false
-    
     @State var refresh = false
     
     var body: some View {
@@ -25,36 +22,36 @@ struct CalendarView: View {
             }
             .padding(.vertical)
         }
-        //        .safeAreaInset(edge: .bottom) {
-        HStack {
-            Button(action: {
-                self.showModal.toggle()
-                refresh.toggle()
-            }, label: {
-                Text("Create New")
-                    .fontWeight(.bold)
-                    .padding(.vertical)
-                    .frame(maxWidth: .infinity)
-                    .background(Color("Blue"), in: Capsule())
-            }).sheet(isPresented: $showModal) {
-                CreateModalView(showModal: self.$showModal, reminderDate: currentDate)
+        .safeAreaInset(edge: .bottom) {
+            HStack {
+                Button(action: {
+                    showModal2.toggle()
+                }, label: {
+                    Text("Reminders")
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                        .frame(maxWidth: .infinity)
+                        .background(Color("Orange"), in: Capsule())
+                }).sheet(isPresented: $showModal2) {
+                    ReminderModalView(showModal: self.$showModal2)
+                }
+                Button(action: {
+                    self.showModal.toggle()
+                    refresh.toggle()
+                }, label: {
+                    Text("Create New")
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                        .frame(maxWidth: .infinity)
+                        .background(Color("Blue"), in: Capsule())
+                }).sheet(isPresented: $showModal) {
+                    CreateModalView(showModal: self.$showModal, reminderDate: currentDate)
+                }
             }
-            Button(action: {
-                showModal2.toggle()
-            }, label: {
-                Text("Reminders")
-                    .fontWeight(.bold)
-                    .padding(.vertical)
-                    .frame(maxWidth: .infinity)
-                    .background(Color("Orange"), in: Capsule())
-            }).sheet(isPresented: $showModal2) {
-                ReminderModalView(showModal: self.$showModal2)
-            }
+            .padding(.horizontal)
+            .padding(.top, 0)
+            .foregroundColor(.white)
         }
-        .padding(.horizontal)
-        .padding(.top, 0)
-        .foregroundColor(.white)
-        //        }
     }
 }
 
@@ -123,9 +120,35 @@ struct DatePicker: View {
                         }
                 }
             }
-        }
-        .onChange(of: currentMonth) { newValue in
-            currentDate = getCurrentMonth()
+            VStack(spacing: 15) {
+                    Text("Reminders")
+                        .font(.title2.bold())
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.vertical, 20)
+
+                    if let task = tasks.first(where: { task in
+                        return isSameDay(date1: task.remindDate, date2: currentDate)
+                    }) {
+                        ForEach(task.remind) { task in
+                            VStack(alignment: .leading, spacing: 10) {
+                                Text(task.time.addingTimeInterval(CGFloat.random(in: 0...5000)), style: .time)
+                                Text(task.title)
+                                    .font(.title2.bold())
+                            }
+                            .padding(.vertical, 10)
+                            .padding(.horizontal)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .background(Color("Yellow").opacity(0.5).cornerRadius(10))
+                        }
+                    }
+                    else {
+                        Text("No Reminders Found!")
+                    }
+                }
+                .padding()
+            }
+            .onChange(of: currentMonth) { newValue in
+                currentDate = getCurrentMonth()
         }
     }
     
@@ -202,9 +225,7 @@ struct DateValue: Identifiable {
     var date: Date
 }
 
-
 extension Date {
-    
     func getAllDates() -> [Date] {
         let calendar = Calendar.current
         let startDate = calendar.date(from: Calendar.current.dateComponents([.year, .month], from: self))!

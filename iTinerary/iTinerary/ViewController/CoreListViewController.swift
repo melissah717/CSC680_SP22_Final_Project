@@ -79,7 +79,6 @@ class CoreListViewController: UIViewController, UITableViewDelegate, UITableView
     
     // Core Data
     func getAllItems() {
-        
         do {
             models = try context.fetch(ToDoListItem.fetchRequest())
             

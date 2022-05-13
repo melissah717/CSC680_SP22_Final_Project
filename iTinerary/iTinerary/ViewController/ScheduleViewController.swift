@@ -20,5 +20,4 @@ class ScheduleViewController: UIHostingController<CalendarView> {
         super.init(coder: coder, rootView: CalendarView())
             
     }
-    
 }

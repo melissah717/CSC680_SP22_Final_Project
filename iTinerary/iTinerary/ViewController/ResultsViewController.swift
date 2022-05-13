@@ -56,10 +56,9 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
         tableView.isHidden = true;
-        
         let place = places[indexPath.row]
+        
         GooglePlacesManager.shared.resolveLocation(for: place) { [weak self] result in
             switch result {
             case .success(let coordinate):

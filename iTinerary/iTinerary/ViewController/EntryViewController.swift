@@ -4,7 +4,7 @@
 //
 //  Created by Ze Lei on 5/5/22.
 //
-// resource: https://www.youtube.com/watch?v=pZVXENscpTM
+//  Resource: https://www.youtube.com/watch?v=pZVXENscpTM
 
 import Foundation
 import UIKit
@@ -46,5 +46,4 @@ class EntryViewController: UIViewController, UITextViewDelegate, UITextFieldDele
             textField.textColor = UIColor.label
         }
     }
-    
 }

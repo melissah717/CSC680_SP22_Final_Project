@@ -45,6 +45,15 @@ struct CreateModalView: View {
         }
         .safeAreaInset(edge: .bottom) {
             HStack {
+                Button("Dismiss") {
+                    self.showModal.toggle()
+                }
+                .padding(.vertical)
+                .frame(maxWidth: .infinity)
+                .background(Color("Orange").opacity(0.75), in: Capsule())
+                .foregroundColor(Color.primary)
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                
                 Button("Save"){
                     saveReminder()
                     self.showModal.toggle()
@@ -52,14 +61,6 @@ struct CreateModalView: View {
                 .padding(.vertical)
                 .frame(maxWidth: .infinity)
                 .background(Color("Blue"), in: Capsule())
-                .foregroundColor(Color.primary)
-                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                Button("Dismiss") {
-                    self.showModal.toggle()
-                }
-                .padding(.vertical)
-                .frame(maxWidth: .infinity)
-                .background(Color("Orange"), in: Capsule())
                 .foregroundColor(Color.primary)
                 .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
             }
