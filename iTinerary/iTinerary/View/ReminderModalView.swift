@@ -33,10 +33,9 @@ struct ReminderModalView: View {
                 }
                 else {
                         ForEach(tasks) { task in
-                            ForEach(task.remind) { remind in
+                            ForEach(task.reminders) { remind in
                                 VStack(alignment: .leading, spacing: 10) {
                                     Text(getDate(date: task.remindDate))
-                                    Text(remind.time.addingTimeInterval(CGFloat.random(in: 0...5000)), style: .time)
                                     Text(remind.title)
                                         .font(.title2.bold())
                                 }

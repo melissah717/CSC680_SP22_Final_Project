@@ -11,13 +11,17 @@ import SwiftUI
 struct Reminder: Identifiable {
     var id = UUID().uuidString
     var title: String
-    var time: Date = Date()
 }
 
 struct ReminderData: Identifiable {
     var id = UUID().uuidString
-    var remind: [Reminder]
+    var reminders: [Reminder]
     var remindDate: Date
+    
+    mutating func addReminder(reminder: Reminder){
+            reminders.append(reminder)
+        }
+
 }
 
 func getSampleDate(offset: Int) -> Date {
@@ -30,13 +34,13 @@ func getSampleDate(offset: Int) -> Date {
 
 var tasks: [ReminderData] = [
     
-    ReminderData(remind: [
+    ReminderData(reminders: [
     
         Reminder(title: "Study for 680 Final"),
         Reminder(title: "Finish 648 Final Project")
     ], remindDate: getSampleDate(offset: -2)),
     
-    ReminderData(remind: [
+    ReminderData(reminders: [
     
         Reminder(title: "Buy Groceries"),
         Reminder(title: "Take the Dog to Vet")

@@ -14,11 +14,24 @@ struct CreateModalView: View {
     @State var reminderName: String = ""
     @State var reminderDate: Date
     
+    func isSameDay(date1: Date, date2: Date) -> Bool {
+        let calendar = Calendar.current
+        return calendar.isDate(date1, inSameDayAs: date2)
+    }
+    
     private func saveReminder(){
-        tasks.append(ReminderData(remind: [
+        if let taskIndex = tasks.firstIndex(where: { task in
+            return isSameDay(date1: task.remindDate, date2: reminderDate)
+        }){
+            tasks[taskIndex].addReminder(reminder: Reminder(title: reminderName))
             
-            Reminder(title: reminderName)
-        ], remindDate: reminderDate))
+        }else{
+            tasks.append(ReminderData(reminders: [
+                
+                Reminder(title: reminderName)
+            ], remindDate: reminderDate))
+        }
+        
     }
     
     private func getDate(date: Date) -> String{
@@ -34,7 +47,7 @@ struct CreateModalView: View {
                 .bold()
                 .padding()
                 .foregroundColor(Color.primary)
-                
+            
             TextField("Title", text: $reminderName)
                 .padding()
                 .foregroundColor(Color.primary)

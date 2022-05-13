@@ -121,34 +121,34 @@ struct DatePicker: View {
                 }
             }
             VStack(spacing: 15) {
-                    Text("Reminders")
-                        .font(.title2.bold())
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.vertical, 20)
-
-                    if let task = tasks.first(where: { task in
-                        return isSameDay(date1: task.remindDate, date2: currentDate)
-                    }) {
-                        ForEach(task.remind) { task in
-                            VStack(alignment: .leading, spacing: 10) {
-                                Text(task.time.addingTimeInterval(CGFloat.random(in: 0...5000)), style: .time)
-                                Text(task.title)
-                                    .font(.title2.bold())
-                            }
-                            .padding(.vertical, 10)
-                            .padding(.horizontal)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .background(Color("Yellow").opacity(0.5).cornerRadius(10))
+                Text("Reminders")
+                    .font(.title2.bold())
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.vertical, 20)
+                
+                if let task = tasks.first(where: { task in
+                    return isSameDay(date1: task.remindDate, date2: currentDate)
+                })
+                {
+                    ForEach(task.reminders) { task in
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text(task.title)
+                                .font(.title2.bold())
                         }
-                    }
-                    else {
-                        Text("No Reminders Found!")
+                        .padding(.vertical, 10)
+                        .padding(.horizontal)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(Color("Yellow").opacity(0.5).cornerRadius(10))
                     }
                 }
-                .padding()
+                else {
+                    Text("No Reminders Found!")
+                }
             }
-            .onChange(of: currentMonth) { newValue in
-                currentDate = getCurrentMonth()
+            .padding()
+        }
+        .onChange(of: currentMonth) { newValue in
+            currentDate = getCurrentMonth()
         }
     }
     
